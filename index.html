@@ -384,108 +384,208 @@
 
 <script>
 const questionPool = [
-    { q: "What is the primary purpose of cancer awareness?", options: ["To diagnose cancer without a doctor", "To help people spot changes early and start conversations with doctors sooner", "To cure cancer using home remedies", "To eliminate the need for medical screenings"], answer: 1 },
-    { q: "Which statement regarding cancer outcomes is true according to the text?", options: ["Cancer is always fatal", "Advances in early detection and modern healthcare have significantly improved outcomes", "Modern healthcare has no effect on cancer survival rates", "Cancer cannot be treated once detected"], answer: 1 },
-    { q: "How does cancer spread between individuals?", options: ["Through air like a cold or flu", "Through direct physical touch", "Cancer is not contagious and cannot spread from person to person", "By sharing food or utensils"], answer: 2 },
-    { q: "What is a primary negative effect of cancer stigma and fear?", options: ["It causes cancer to spread faster", "It prevents people from getting checked and having timely check-ups", "It increases the cost of medical treatment", "It causes medical equipment to fail"], answer: 1 },
-    { q: "What does the principle 'Prevention Isn't Perfection' mean?", options: ["Preventive steps completely guarantee you will never get cancer", "Developing cancer is always the patient's fault", "Preventive steps lower overall risk, but do not guarantee total protection", "Prevention is useless and should be ignored"], answer: 2 },
-    { q: "Where can breast cancer develop?", options: ["Only in women over 50", "In the cells of the breast, affecting both women and men", "Exclusively in non-smokers", "Only in individuals with a family history"], answer: 1 },
-    { q: "Which of the following is a potential warning sign of breast cancer?", options: ["Persistent cough", "Dark blood in the stool", "New lumps, changes in breast size/shape, or nipple discharge", "Difficulty starting urination"], answer: 2 },
-    { q: "What practice makes it easier for an individual to notice unexpected breast changes?", options: ["Annual chest X-rays", "Self-awareness and familiarity with how breasts normally look and feel", "Taking daily vitamin supplements", "Avoiding all physical activity"], answer: 1 },
-    { q: "Who has the highest risk of developing lung cancer?", options: ["Active or former smokers", "Individuals who eat high-fiber diets", "Young children", "People with dark skin tones"], answer: 0 },
-    { q: "What is a key warning sign associated with lung cancer?", options: ["A mole changing color", "A persistent cough that worsens over time or coughing up blood", "Unexplained vaginal bleeding", "Difficulty starting urination"], answer: 1 },
-    { q: "Which action significantly reduces the risk of lung cancer?", options: ["Avoiding all sun exposure", "Avoiding tobacco exposure and keeping indoor spaces smoke-free", "Receiving an annual Pap smear", "Increasing alcohol consumption"], answer: 1 },
-    { q: "Where does colorectal cancer develop?", options: ["In the lungs and chest cavity", "In the colon or rectum", "In the prostate gland", "In the outer layers of skin"], answer: 1 },
-    { q: "What pre-cancerous growths can routine colorectal screening find and remove?", options: ["Moles", "Polyps", "Cysts", "Infections"], answer: 1 },
-    { q: "Which warning sign is specifically associated with colorectal cancer?", options: ["Changes in bowel habits lasting several weeks or dark/bright red blood in stool", "Difficulty starting urination", "Nipple discharge", "New growths after sun exposure"], answer: 0 },
-    { q: "Who is primarily affected by prostate cancer?", options: ["Women over age 30", "Men, with risk increasing significantly after age 50 or with family history", "Children and adolescents", "Non-smokers under age 20"], answer: 1 },
-    { q: "Which of the following is a symptom associated with prostate cancer?", options: ["Weak or interrupted urinary flow and frequent nighttime urination", "Coughing up blood", "Moles changing shape or color", "Dimpling of breast skin"], answer: 0 },
-    { q: "Around what age should men discuss prostate screening options with a healthcare provider?", options: ["Age 18–20", "Age 25–30", "Age 45–50", "Age 70–75"], answer: 2 },
-    { q: "What is the primary cause of cervical cancer?", options: ["Exposure to ultraviolet (UV) radiation", "Persistent infection with certain types of HPV (Human Papillomavirus)", "High alcohol consumption", "Sedentary lifestyle"], answer: 1 },
-    { q: "Which warning sign is linked to cervical cancer?", options: ["Abnormal vaginal bleeding between periods or after intercourse", "Persistent dry cough", "Difficulty starting urination", "Unexplained weight loss only"], answer: 0 },
-    { q: "How can cervical cancer be effectively prevented and protected against?", options: ["Sunscreen application and protective clothing", "Regular Pap/HPV screenings and early HPV vaccination", "Avoiding secondhand tobacco smoke", "Eating a high-protein diet"], answer: 1 },
-    { q: "Who is at risk for skin cancer?", options: ["Only people with fair skin", "Anyone exposed to UV radiation from the sun or tanning beds", "Only individuals over age 60", "Only active smokers"], answer: 1 },
-    { q: "What should you watch for regarding skin cancer detection?", options: ["Polyps in the digestive tract", "New growths, non-healing sores, or moles that change in size, shape, or color", "Frequent nighttime urination", "Chest discomfort when exercising"], answer: 1 },
-    { q: "Which of the following is an effective sun safety practice?", options: ["Using broad-spectrum sunscreen, wearing protective clothing, and avoiding tanning beds", "Getting an annual HPV vaccination", "Increasing physical activity outdoors without shade", "Regular Pap testing"], answer: 0 },
-    { q: "What is the definition of medical 'screening'?", options: ["Treatment given to advanced cancer patients", "Testing performed on individuals before they have symptoms to catch changes early", "Diagnostic procedures performed after severe symptoms appear", "Surgery to remove late-stage tumors"], answer: 1 },
-    { q: "How do screening tests differ from diagnostic tests?", options: ["Screening is routine for healthy people; diagnostic tests are done when symptoms exist", "Screening is only done in hospitals; diagnostic tests are done at home", "Screening requires surgery; diagnostic tests use paper questionnaires", "There is no difference between screening and diagnostic tests"], answer: 0 },
-    { q: "Why is knowing your family health history important?", options: ["It helps predict exact dates of future illnesses", "Shared health history can indicate if you should start screening earlier than standard guidelines", "It eliminates the need for any cancer screenings", "It cures inherited genetic conditions"], answer: 1 },
-    { q: "Which two vaccines act as direct cancer prevention public health tools?", options: ["Flu and Covid-19 vaccines", "HPV and Hepatitis B vaccines", "Tetanus and Measles vaccines", "Polio and Chickenpox vaccines"], answer: 1 },
-    { q: "How long must a symptom typically persist before it requires professional medical evaluation?", options: ["1–2 days", "More than 2–3 weeks", "At least 6 months", "Exactly 1 year"], answer: 1 },
-    { q: "What should you prepare before visiting a doctor for health concerns?", options: ["A list of symptoms, when they started, personal health history, and questions", "A self-diagnosis from online forums", "A signed waiver declining tests", "No preparation is needed"], answer: 0 },
-    { q: "What is the goal of community health education regarding cancer?", options: ["To replace hospital doctors with community leaders", "To share accurate information that empowers communities to support each other", "To force individuals to take medications", "To rank individuals by health scores"], answer: 1 },
-    { q: "What is cancer fundamentally defined as?", options: ["A bacterial infection in the blood", "A group of diseases where abnormal cells grow and divide uncontrollably", "A viral rash on the skin", "A temporary inflammation of muscles"], answer: 1 },
-    { q: "What can abnormal cancer cells do in the body?", options: ["Convert into healthy tissue automatically", "Spread to other parts of the body", "Produce beneficial vitamins", "Prevent viral infections"], answer: 1 },
-    { q: "Why is guidance from qualified healthcare professionals important when making health decisions?", options: ["Because cancer is simple to treat at home", "Because cancer is complex and requires reliable guidance", "Because medical information is identical for everyone", "Because doctors are required for dietary tracking"], answer: 1 },
-    { q: "Are all cancer types identical in their risk factors and symptoms?", options: ["Yes, all cancers have the same symptoms", "No, each type can have different risk factors, symptoms, and treatment options", "Yes, all cancers affect the same organ", "No, but all cancers use identical treatment"], answer: 1 },
-    { q: "What is the effect of physical activity on cancer risk?", options: ["It increases cancer risk significantly", "Regular physical activity contributes to overall health and is associated with lower risk of several cancers", "It has zero connection to health", "It replaces the need for vaccination"], answer: 1 },
-    { q: "How does alcohol consumption affect cancer risk?", options: ["It lowers cancer risk", "Alcohol consumption is associated with an increased risk of several types of cancer", "It has no relationship to health", "It prevents viral infections"], answer: 1 },
-    { q: "What constitutes a balanced diet that supports overall health?", options: ["Only eating protein powders", "A variety of fruits, vegetables, whole grains, and other nutritious foods", "Strictly consuming fruit juice", "Avoiding all carbohydrates"], answer: 1 },
-    { q: "What should be done if you notice an unusual lump or swelling that does not go away?", options: ["Ignore it until it hurts", "Have it evaluated by a healthcare professional", "Apply ice and wait 6 months", "Take over-the-counter antibiotics"], answer: 1 },
-    { q: "What type of changes in skin require professional evaluation?", options: ["Temporary redness after exercising", "A new or changing mole or a sore that does not heal", "Dry skin during winter", "Freckles present since birth"], answer: 1 },
-    { q: "Unexplained weight loss and persistent fatigue are examples of what?", options: ["Normal signs of aging", "Possible general warning signs that warrant medical discussion", "Guaranteed indicators of lung cancer", "Symptoms of sunburn"], answer: 1 },
-    { q: "Persistent pain that keeps getting worse should be:", options: ["Ignored", "Discussed with a qualified healthcare professional", "Treated only with bed rest", "Exposed to sunlight"], answer: 1 },
-    { q: "Persistent changes in bowel or bladder habits are examples of:", options: ["Changes in body function that may need medical attention", "Irrelevant daily fluctuations", "Signs of dietary perfection", "Normal responses to sun exposure"], answer: 0 },
-    { q: "What is the main message when in doubt about health symptoms?", options: ["Wait for symptoms to disappear", "Seek professional advice", "Self-medicate with herbs", "Ignore persistent changes"], answer: 1 },
-    { q: "Why is normalizing health conversations important?", options: ["It reduces fear and encourages timely check-ups", "It forces people to undergo surgery", "It eliminates the need for hospitals", "It increases public panic"], answer: 0 },
-    { q: "What affects cancer risk according to the course content?", options: ["Only genetic inheritance", "A combination of lifestyle, environmental, infectious, and inherited factors", "Only atmospheric weather", "Only age"], answer: 1 },
-    { q: "Which infectious agent is a major cause of cervical cancer?", options: ["Hepatitis B", "Human Papillomavirus (HPV)", "Influenza A", "Tetanus bacteria"], answer: 1 },
-    { q: "Which virus infection is associated with liver cancer risk?", options: ["Hepatitis B", "Rhinovirus", "HPV", "Norovirus"], answer: 0 },
-    { q: "Can non-smokers develop lung cancer?", options: ["No, only active smokers get lung cancer", "Yes, exposure to secondhand smoke or environmental factors can affect non-smokers", "No, lung cancer only occurs from direct smoking", "Yes, but only if they are over 90 years old"], answer: 1 },
-    { q: "What can pre-cancerous growths in the colon become if not removed?", options: ["Normal muscle tissue", "Cancerous over time", "Hormones", "Skin cells"], answer: 1 },
-    { q: "What is an example of an unusual change in skin appearance?", options: ["Sore that does not heal", "Temporary sweat", "Dust on skin", "A tattoo"], answer: 0 },
-    { q: "What is recommended regarding tobacco and cancer risk?", options: ["Limit smoking to twice a day", "Avoiding tobacco use and exposure to secondhand smoke can reduce cancer risk", "Switching to cigars eliminates risk", "Tobacco has no link to cancer"], answer: 1 },
-    { q: "Excessive exposure to UV radiation can increase the risk of which cancer?", options: ["Colorectal cancer", "Skin cancer", "Prostate cancer", "Lung cancer"], answer: 1 },
-    { q: "How does early conversation with a healthcare provider help patients?", options: ["It guarantees an instant cure", "It helps people understand what is happening and what steps may be appropriate", "It removes the need for tests", "It replaces all medical treatments"], answer: 1 },
-    { q: "Is developing cancer ever someone's fault?", options: ["Yes, always", "No, developing cancer is never someone's fault", "Yes, if they didn't exercise", "Only if they skipped screening"], answer: 1 },
-    { q: "What should you do if a symptom is mild but persistent over several weeks?", options: ["Ignore it because it is mild", "Have it evaluated by a medical professional", "Self-medicate indefinitely", "Assume it is contagious"], answer: 1 },
-    { q: "What is one way to overcome hesitation about visiting a clinic?", options: ["Encouraging friends and family and addressing anxiety or cost concerns", "Waiting until symptoms become severe", "Avoiding doctors entirely", "Relying solely on social media"], answer: 0 },
-    { q: "What role does broad-spectrum sunscreen play in health?", options: ["Protects skin from excessive UV exposure", "Prevents lung cancer", "Cures skin lesions", "Replaces HPV vaccination"], answer: 0 },
-    { q: "What is the primary site of origin for prostate cancer?", options: ["The bladder", "The prostate gland", "The kidneys", "The liver"], answer: 1 },
-    { q: "What kind of vaginal bleeding should be checked by a doctor?", options: ["Normal monthly menses", "Abnormal bleeding between periods or after intercourse", "Bleeding that stops within 5 seconds", "No bleeding ever needs checking"], answer: 1 },
-    { q: "Which factor increases colorectal cancer risk?", options: ["Regular exercise", "Age, sedentary habits, and poor diet", "High fruit intake", "Broad-spectrum sunscreen"], answer: 1 },
-    { q: "What is a symptom of altered bladder function listed in the text?", options: ["Difficulty starting urination or weak flow", "Coughing up blood", "Skin dimpling", "Nipple discharge"], answer: 0 },
-    { q: "What is the impact of finding polyps during colorectal screening?", options: ["They can be removed before becoming cancerous", "It causes immediate lung infection", "It indicates severe skin damage", "It requires immediate heart surgery"], answer: 0 },
-    { q: "How can community members support each other in health?", options: ["By sharing accurate, clear health information", "By diagnosing each other at home", "By prescribing medications to neighbors", "By ignoring symptoms"], answer: 0 },
-    { q: "What should you do if an existing mole changes in size, shape, or color?", options: ["Apply cosmetic cream", "Have it evaluated by a doctor", "Cover it with a bandage forever", "Ignore it"], answer: 1 },
-    { q: "What is a recommended lifestyle choice to lower cancer risk?", options: ["Sedentary lifestyle", "Healthy diet, regular physical activity, and avoiding tobacco", "High alcohol consumption", "Excessive sun tanning"], answer: 1 },
-    { q: "What kind of cough requires medical evaluation?", options: ["A single cough from throat dryness", "A persistent cough that worsens over time", "A cough that disappears in 10 seconds", "Clearing your throat once"], answer: 1 },
-    { q: "Why are routine Pap/HPV tests performed on women without symptoms?", options: ["To treat flu viruses", "As routine screening to detect cervical changes early", "To measure blood pressure", "To check lung capacity"], answer: 1 },
-    { q: "What is the core message of 'Beyond the Ribbon' regarding health information?", options: ["To make reliable cancer information simple to understand and easy to access", "To sell medical equipment", "To replace professional doctors", "To provide medical degrees online"], answer: 0 },
-    { q: "Can men develop breast cancer?", options: ["No, never", "Yes, men can also develop breast cancer and should be aware of changes", "Only men over age 90", "Only active smokers"], answer: 1 },
-    { q: "Which type of cancer screening can detect pre-cancerous polyps?", options: ["Colorectal screening", "Skin visual exam", "Pap test", "Mammogram"], answer: 0 },
-    { q: "What environmental factor is mentioned as increasing lung cancer risk for non-smokers?", options: ["Secondhand smoke", "Excessive sunlight", "Sedentary lifestyle", "Poor diet"], answer: 0 },
-    { q: "What does broad-spectrum sunscreen protect against?", options: ["Bacterial infections", "Ultraviolet (UV) radiation", "Viruses", "Air pollution"], answer: 1 },
-    { q: "What is a recommended response to persistent abdominal discomfort?", options: ["Seek medical evaluation", "Drink more alcohol", "Avoid all physical movement", "Ignore it"], answer: 0 },
-    { q: "Why should you inform your doctor about your family health history?", options: ["To determine if earlier or more frequent screening is necessary", "To change your legal name", "To skip all future check-ups", "To lower your age"], answer: 0 },
-    { q: "What is the result of early detection in cancer care?", options: ["It significantly improves treatment outcomes", "It makes treatment impossible", "It increases risk of virus transmission", "It has no clinical benefit"], answer: 0 },
-    { q: "What is the main function of the HPV vaccine?", options: ["To prevent infections known to cause cervical and other cancers", "To cure lung cancer", "To treat skin burns", "To replace bowel screenings"], answer: 0 },
-    { q: "What should you do if you notice a persistent change in your body function?", options: ["Speak with a qualified healthcare professional", "Wait 2 years to see if it changes", "Assume it is normal aging without checking", "Take random vitamins"], answer: 0 },
-    { q: "How does limited alcohol consumption affect cancer risk?", options: ["It reduces the risk of several types of cancer", "It increases skin cancer risk", "It causes lung polyps", "It has no effect"], answer: 0 },
-    { q: "What is an example of an unusual lump location?", options: ["Any lump or swelling in the body that does not go away", "Normal muscle contour", "Elbow joint bones", "Kneecap"], answer: 0 },
-    { q: "What is a key benefit of early conversations with healthcare providers?", options: ["Understanding what is happening and determining appropriate steps", "Avoiding all medical tests forever", "Getting free medications", "Guaranteeing zero health issues"], answer: 0 },
-    { q: "Which factor is NOT listed as a cancer risk contributor?", options: ["Infectious factors", "Environmental factors", "Inherited factors", "Reading books"], answer: 3 },
-    { q: "What does 'unusual bleeding' include as a potential warning sign?", options: ["Bleeding in stool or abnormal vaginal bleeding", "A minor finger papercut", "A scraped knee from sports", "Normal shedding of dry skin"], answer: 0 },
-    { q: "What is the purpose of diagnostic testing?", options: ["Conducted when someone already experiences a symptom or warning sign", "Done on healthy populations with zero symptoms", "Given as a routine annual check for everyone", "Used to vaccinate against viruses"], answer: 0 },
-    { q: "How can individuals protect their skin during peak sun hours?", options: ["Seeking shade and wearing protective clothing", "Using tanning beds", "Drinking extra alcohol", "Avoiding broad-spectrum sunscreen"], answer: 0 },
-    { q: "What is the relationship between Hepatitis B vaccination and cancer?", options: ["It helps prevent liver cancer caused by Hepatitis B infection", "It cures lung cancer", "It prevents skin moles", "It replaces colorectal screening"], answer: 0 },
-    { q: "What should you bring to a medical consultation regarding new symptoms?", options: ["Notes on symptom onset, frequency, and personal health questions", "A list of unrelated hobbies", "Proof of physical fitness", "No information"], answer: 0 },
-    { q: "Why is cancer not considered contagious?", options: ["Because it cannot be transmitted from person to person through contact or air", "Because it is caused only by cold weather", "Because it is a blood-borne virus only", "Because it only affects elderly individuals"], answer: 0 },
-    { q: "What should be done if an individual feels anxiety about medical check-ups?", options: ["Seek community support and address concerns to access care", "Avoid clinics entirely", "Wait until symptoms become severe", "Ignore the anxiety"], answer: 0 },
-    { q: "What is the recommended approach to physical activity for cancer risk reduction?", options: ["Engage in regular physical activity", "Avoid all movement", "Exercise only once a year", "Exercise only when sick"], answer: 0 },
-    { q: "What is a common sign of skin changes requiring attention?", options: ["A mole that changes in shape, size, or color", "A temporary smudge of dirt", "A light freckle that stays unchanged for 20 years", "A temporary shadow"], answer: 0 },
-    { q: "What is the impact of tobacco smoke on non-smokers?", options: ["Secondhand smoke exposure increases cancer risk in non-smokers", "It has zero impact on non-smokers", "It protects non-smokers from lung disease", "It improves lung capacity"], answer: 0 },
-    { q: "When should men with a family history of prostate cancer consider discussing screening?", options: ["Earlier, around age 45 or as advised by a doctor", "At age 85", "Never", "Only after severe symptoms appear"], answer: 0 },
-    { q: "What is an example of an unusual change in body function?", options: ["Persistent changes in bowel or bladder habits", "Feeling hungry before lunch", "Tiredness after running a marathon", "Sneezing once in spring"], answer: 0 },
-    { q: "What is the core takeaway regarding cancer prevention?", options: ["Making healthy choices reduces risk, but cancer is never someone's fault", "Prevention guarantees 100% protection from all illness", "Lifestyle choices have no impact on health", "Screening is only for sick people"], answer: 0 },
-    { q: "How does awareness empower individuals?", options: ["It helps them navigate healthcare systems with confidence", "It allows them to practice medicine without a license", "It removes the need for hospitals", "It cures diseases instantly"], answer: 0 },
-    { q: "Why are Pap tests vital for cervical health?", options: ["They detect cellular changes early before cancer develops", "They measure lung efficiency", "They treat liver infections", "They assess skin moles"], answer: 0 },
-    { q: "What constitutes protective sun behavior?", options: ["Broad-spectrum sunscreen, shade, and protective clothing", "Using indoor tanning beds daily", "Avoiding sunscreen completely", "Sunbathing during peak hours without protection"], answer: 0 },
-    { q: "What should you do if you experience unexplained, persistent fatigue?", options: ["Discuss it with a qualified healthcare professional", "Drink more caffeine and ignore it", "Assume it is normal without evaluation", "Stop eating fruits and vegetables"], answer: 0 },
-    { q: "What is the main purpose of the 'Beyond the Ribbon' initiative?", options: ["Empowering communities through cancer awareness, education, and reliable information", "Selling insurance plans", "Manufacturing pharmaceutical drugs", "Hosting sports competitions"], answer: 0 },
-    { q: "How many questions are randomly drawn for this assessment from the pool?", options: ["25 questions", "100 questions", "10 questions", "50 questions"], answer: 0 }
+  {
+    question: "How do normal cells in the human body behave?",
+    options: ["They continuously grow without controlled signals", "They grow, divide, and die in a controlled way", "They turn into solid tumors immediately", "They never divide or replace old cells"],
+    answer: 1
+  },
+  {
+    question: "What happens when abnormal cells accumulate in the body?",
+    options: ["They immediately trigger full immune recovery", "They assist old cells in functioning properly", "They can interfere with how healthy tissues and organs function", "They prevent cancer from ever forming"],
+    answer: 2
+  },
+  {
+    question: "Is cancer considered a single uniform disease?",
+    options: ["Yes, every cancer responds identically to treatments", "No, there are many different types of cancer with distinct behaviors", "Yes, all cancers originate from the same single tissue type", "No, because cancer only targets blood cells"],
+    answer: 1
+  },
+  {
+    question: "What is a tumor defined as in the text?",
+    options: ["A viral infection of the tissue", "A mass of abnormal cells that has grown in a particular part of the body", "A specialized blood cell cluster", "Any form of skin discoloration"],
+    answer: 1
+  },
+  {
+    question: "What does it mean if a tumor is classified as benign?",
+    options: ["It is non-cancerous and does not spread to other parts of the body", "It is cancerous and invades nearby tissues", "It spreads rapidly throughout the lymphatic system", "It requires immediate chemotherapy"],
+    answer: 0
+  },
+  {
+    question: "What is a key feature of malignant tumors?",
+    options: ["They are completely harmless", "They cannot invade nearby tissues", "They are cancerous and can spread to other body parts", "They only occur in blood cells"],
+    answer: 2
+  },
+  {
+    question: "Do all cancers form solid tumors?",
+    options: ["Yes, all cancers form visible lumps", "No, some cancers such as many blood cancers do not form solid tumors", "Yes, but only benign cancers form tumors", "No, no cancers form solid tumors"],
+    answer: 1
+  },
+  {
+    question: "Does finding a lump or tumor automatically indicate cancer?",
+    options: ["Yes, every lump is malignant", "No, only appropriate medical evaluation can determine what it represents", "Yes, because benign tumors do not exist", "No, lumps always vanish within days without evaluation"],
+    answer: 1
+  },
+  {
+    question: "Where in the human body can cancer begin?",
+    options: ["Only in skin tissue", "Only in blood and lymph nodes", "Almost anywhere in the body", "Exclusively in digestive organs"],
+    answer: 2
+  },
+  {
+    question: "Which type of cancer specifically affects the colon or rectum?",
+    options: ["Breast cancer", "Cervical cancer", "Colorectal cancer", "Prostate cancer"],
+    answer: 2
+  },
+  {
+    question: "Where does prostate cancer develop?",
+    options: ["In breast tissue", "In the prostate gland", "In skin cells", "In lung tissue"],
+    answer: 1
+  },
+  {
+    question: "How is cancer metastasizing described?",
+    options: ["When abnormal cells die off inside a tumor", "When cancer cells spread from where they started to other areas of the body", "When a tumor becomes benign", "When cancer is completely cured by surgery"],
+    answer: 1
+  },
+  {
+    question: "Why does stage matter when diagnosing cancer?",
+    options: ["It determines the patient's age group", "It describes how large the cancer is and how far it has spread", "It indicates which doctor perform surgery", "It measures the patient's blood pressure"],
+    answer: 1
+  },
+  {
+    question: "How is cancer defined as a category of diseases?",
+    options: ["A group of different conditions sharing abnormal cell growth", "A single illness with a fixed set of symptoms", "A temporary bacterial infection", "An incurable blood condition present at birth"],
+    answer: 0
+  },
+  {
+    question: "According to the myth 'Cancer equals 100% death', what is the actual reality?",
+    options: ["Cancer is always fatal regardless of treatment", "Survival rates have improved significantly over time due to better early detection and treatments", "Cancer cannot be treated at all", "Cancer is never serious"],
+    answer: 1
+  },
+  {
+    question: "What is the truth regarding the myth 'Cancer is contagious'?",
+    options: ["You can catch cancer from touching someone", "Cancer is spread through airborne particles", "You cannot catch cancer from someone else; it is not infectious", "Cancer is transferred via direct skin contact"],
+    answer: 2
+  },
+  {
+    question: "What is the reality behind the myth 'If it doesn't hurt, it's not cancer'?",
+    options: ["Cancer always causes extreme pain in early stages", "Many early-stage cancers cause no pain at all", "Pain is the only reliable symptom of cancer", "Benign tumors cause more pain than cancer"],
+    answer: 1
+  },
+  {
+    question: "What does the text state about the myth 'Superfoods can prevent or cure cancer entirely'?",
+    options: ["Superfoods completely eliminate all cancer risks", "A single food or diet cannot prevent or cure cancer on its own", "Eating berries guarantees cancer protection", "Superfoods replace the need for medical treatments"],
+    answer: 1
+  },
+  {
+    question: "How does the text clarify the myth 'If a relative had cancer, I'm guaranteed to get it'?",
+    options: ["Family history guarantees you will develop cancer", "Most cancers are not inherited; family history increases risk but does not guarantee development", "Genetics play zero role in cancer risk", "Inherited cancers always appear during childhood"],
+    answer: 1
+  },
+  {
+    question: "What is the goal of health habit changes regarding cancer risk?",
+    options: ["Achieving absolute perfection to prevent all illness", "Reducing risk, not achieving absolute perfection", "Guaranteeing a 100% cure rate", "Eliminating all environmental exposures completely"],
+    answer: 1
+  },
+  {
+    question: "Which lifestyle factor is listed as a major preventable cause of cancer?",
+    options: ["Tobacco use", "Drinking distilled water", "Excessive sleep", "Eating organic vegetables"],
+    answer: 0
+  },
+  {
+    question: "How does alcohol impact cancer risk?",
+    options: ["It completely protects against liver cancer", "Regular or heavy alcohol consumption increases the risk of several cancer types", "It has zero impact on cancer risk", "It lowers overall cancer risk when consumed daily"],
+    answer: 1
+  },
+  {
+    question: "What role does UV exposure play in cancer risk?",
+    options: ["It prevents skin cancer", "Overexposure to UV radiation from sun or tanning beds increases skin cancer risk", "It only affects blood cells", "It cures underlying tissue damage"],
+    answer: 1
+  },
+  {
+    question: "Which factor listed is an unmodifiable risk factor for cancer?",
+    options: ["Tobacco consumption", "Dietary choices", "Age", "Sun exposure habits"],
+    answer: 2
+  },
+  {
+    question: "What is true regarding the single universal treatment for cancer?",
+    options: ["There is one master drug that cures all cancer", "There is no single treatment because cancer types and individuals vary", "Surgery is the only treatment ever used", "Radiation cures all cancers without exception"],
+    answer: 1
+  },
+  {
+    question: "What is the primary objective of surgical cancer treatment?",
+    options: ["To use high-energy rays to shrink tumors", "To physically remove the cancerous tissue or tumor from the body", "To train the immune system to recognize cancer", "To target specific genetic mutations in cells"],
+    answer: 1
+  },
+  {
+    question: "How does radiation therapy work?",
+    options: ["It uses high-energy rays to damage or destroy cancer cells", "It uses medication intravenously to target fast-growing cells", "It replaces damaged blood stem cells", "It involves surgical excision of organs"],
+    answer: 0
+  },
+  {
+    question: "What is chemotherapy?",
+    options: ["Surgical removal of solid tumors", "Treatment using drugs to kill fast-growing cells throughout the body", "Hormonal suppression therapy", "Light-based skin treatments"],
+    answer: 1
+  },
+  {
+    question: "How does immunotherapy assist in cancer treatment?",
+    options: ["It directly cuts out tumors", "It helps the body's own immune system recognize and attack cancer cells", "It blocks all cell division in healthy tissues", "It uses radiation rays to burn abnormal cells"],
+    answer: 1
+  },
+  {
+    question: "What is targeted therapy focused on?",
+    options: ["Targeting specific molecules or genetic changes that help cancer grow", "Removing whole organs surgically", "General non-specific destruction of all body cells", "Applying cold temperatures to skin lesions"],
+    answer: 0
+  },
+  {
+    question: "What does hormone therapy do?",
+    options: ["Replaces damaged bone marrow", "Blocks or removes hormones that fuel certain cancers", "Injects synthetic hormones to boost tumor growth", "Uses high-energy radiation beams"],
+    answer: 1
+  },
+  {
+    question: "What is the main role of stem cell transplants?",
+    options: ["Restoring healthy blood-forming cells after high-dose treatments", "Removing solid tumors from organs", "Blocking UV light absorption", "Destroying immune system functions"],
+    answer: 0
+  },
+  {
+    question: "What is the purpose of clinical trials in cancer care?",
+    options: ["To replace all standard hospital operations", "To test new treatments and help figure out what works best", "To eliminate the need for medical evaluations", "To study non-medical health supplements"],
+    answer: 1
+  },
+  {
+    question: "Why do treatment plans often include more than one type of therapy?",
+    options: ["To increase patient costs", "Because combining treatments often offers the best chance of effectiveness", "Because individual treatments never work at all", "To test untried remedies simultaneously"],
+    answer: 1
+  },
+  {
+    question: "Why are side effects common during cancer treatment?",
+    options: ["Because treatments often affect healthy fast-growing cells alongside cancer cells", "Because cancer treatments are toxic without purpose", "Because patients avoid proper nutrition", "Because side effects indicate treatment failure"],
+    answer: 0
+  },
+  {
+    question: "What is the recommended approach when coping with cancer treatment side effects?",
+    options: ["Ignore them until treatment finishes", "Communicate them openly with healthcare teams for management options", "Stop taking all prescribed medications immediately", "Self-medicate with unverified supplements"],
+    answer: 1
+  },
+  {
+    question: "What does survivorship in cancer care encompass?",
+    options: ["Only the exact hour surgery is performed", "Living with, through, and beyond cancer diagnosis and treatment", "The period prior to cancer diagnosis", "Decisions made exclusively by insurance providers"],
+    answer: 1
+  },
+  {
+    question: "Why is follow-up care important after cancer treatment?",
+    options: ["To monitor for potential recurrence and manage long-term side effects", "To repeat initial diagnostic tests weekly forever", "To guarantee no other illness ever occurs", "To restrict physical movement indefinitely"],
+    answer: 0
+  },
+  {
+    question: "How can emotional support help cancer patients during their journey?",
+    options: ["By curing physical tumors directly", "By helping process anxiety, fear, and emotional changes", "By replacing medical treatments", "By preventing genetic mutations"],
+    answer: 1
+  },
+  {
+    question: "Why should patients discuss medical decisions with qualified professionals?",
+    options: ["Because online advice is always completely accurate", "To ensure treatment plans are personalized and evidence-based", "Because doctors dictate decisions without patient input", "To avoid all potential side effects"],
+    answer: 1
+  }
 ];
-
+</script>
 let activeQuestions = [];
 let userAnswers = {};
 let currentIdx = 0;
