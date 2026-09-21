@@ -384,10 +384,10 @@
 
 <script>
 const questionPool = [
-  {
-     { q: "What constitutes protective sun behavior?", options: ["Broad-spectrum sunscreen, shade, and protective clothing", "Using indoor tanning beds daily", "Avoiding sunscreen completely", "Sunbathing during peak hours without protection"], answer: 0 },
+     treat liver infections", "They assess skin moles"], answer: 0 },
+    { q: "What constitutes protective sun behavior?", options: ["Broad-spectrum sunscreen, shade, and protective clothing", "Using indoor tanning beds daily", "Avoiding sunscreen completely", "Sunbathing during peak hours without protection"], answer: 0 },
     { q: "What should you do{ q: "What is the primary purpose of cancer awareness?", options: ["To diagnose cancer without a doctor", "To help people spot changes early and start conversations with doctors sooner", "To cure cancer using home remedies", "To eliminate the need for medical screenings"], answer: 1 },
-    { q: "Which statement regarding cancer outcomes is true ?", options: ["Cancer is always fatal", "Advances in early detection and modern healthcare have significantly improved outcomes", "Modern healthcare has no effect on cancer survival rates", "Cancer cannot be treated once detected"], answer: 1 },
+    { q: "Which statement regarding cancer outcomes is true according to the text?", options: ["Cancer is always fatal", "Advances in early detection and modern healthcare have significantly improved outcomes", "Modern healthcare has no effect on cancer survival rates", "Cancer cannot be treated once detected"], answer: 1 },
     { q: "How does cancer spread between individuals?", options: ["Through air like a cold or flu", "Through direct physical touch", "Cancer is not contagious and cannot spread from person to person", "By sharing food or utensils"], answer: 2 },
     { q: "What is a primary negative effect of cancer stigma and fear?", options: ["It causes cancer to spread faster", "It prevents people from getting checked and having timely check-ups", "It increases the cost of medical treatment", "It causes medical equipment to fail"], answer: 1 },
     { q: "What does the principle 'Prevention Isn't Perfection' mean?", options: ["Preventive steps completely guarantee you will never get cancer", "Developing cancer is always the patient's fault", "Preventive steps lower overall risk, but do not guarantee total protection", "Prevention is useless and should be ignored"], answer: 2 },
@@ -484,9 +484,8 @@ const questionPool = [
     { q: "Why are Pap tests vital for cervical health?", options: ["They detect cellular changes early before cancer develops", "They measure lung efficiency", "They if you experience unexplained, persistent fatigue?", options: ["Discuss it with a qualified healthcare professional", "Drink more caffeine and ignore it", "Assume it is normal without evaluation", "Stop eating fruits and vegetables"], answer: 0 },
     { q: "What is the main purpose of the 'Beyond the Ribbon' initiative?", options: ["Empowering communities through cancer awareness, education, and reliable information", "Selling insurance plans", "Manufacturing pharmaceutical drugs", "Hosting sports competitions"], answer: 0 },
     { q: "How many questions are randomly drawn for this assessment from the pool?", options: ["25 questions", "100 questions", "10 questions", "50 questions"], answer: 0 }
-  }
 ];
-</script>
+
 let activeQuestions = [];
 let userAnswers = {};
 let currentIdx = 0;
@@ -676,7 +675,7 @@ function downloadCertificate() {
     // Fresh image instance to guarantee canvas loading on web hosts
     const img = new Image();
     img.crossOrigin = "anonymous";
-    img.src = "Gemini_Generated_Image_n3oc5ln3oc5ln3oc.jpg";
+    img.src = "47259.jpg";
 
     img.onload = function() {
         canvas.width = img.naturalWidth || 2000;
